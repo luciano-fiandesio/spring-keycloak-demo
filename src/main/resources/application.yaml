@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8082/realms/demo
+        registration:
+          keycloak:
+            client-id: demo
+            client-secret: ${KEYCLOAK_CLIENT_SECRET:jeTwIUgn6xHLzqwVZZqiyZWoPk3e1MTO}
+            client-name: kc-app
+            authorization-grant-type: authorization_code
+            scope: openid,profile,email,offline_access
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
