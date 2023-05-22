@@ -8,19 +8,16 @@ public class DemoController {
 
     @GetMapping("/")
     public String getHome() {
-        System.out.println("Entering protected...");
         return "home";
     }
 
     @GetMapping("/protected")
     public String getProtectedResource() {
-        System.out.println("Entering protected...");
         return "protected";
     }
 
     @GetMapping("/public")
     public String getPublicResource() {
-
         return "public";
     }
 

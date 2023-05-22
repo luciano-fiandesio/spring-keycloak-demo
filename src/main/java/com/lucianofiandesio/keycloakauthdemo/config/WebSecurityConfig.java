@@ -35,7 +35,6 @@ public class WebSecurityConfig {
                 .logout((conf) ->
                         conf
                                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-
                                 .logoutSuccessHandler(oidcLogoutSuccessHandler())
                                 .invalidateHttpSession(true)
                                 .clearAuthentication(true)
